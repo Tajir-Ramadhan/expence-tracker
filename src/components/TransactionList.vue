@@ -14,22 +14,14 @@
       </ul>
 </template>
 
-<script>
-import { ref } from 'vue';
+<script setup>
+import { defineProps } from 'vue';
 
-    export default {
-        setup() {
-            const transactions = ref([
-                { id: 1, text: 'Flower', amount: -20 },
-                { id: 2, text: 'Salary', amount: 300 },
-                { id: 3, text: 'Book', amount: -10 },
-                { id: 4, text: 'Camera', amount: 150 }
-            ])
-
-
-            return {
-                transactions
-            }
-        }
+const pops = defineProps({
+    transactions: {
+        type: Array,
+        required: true
     }
+})
+
 </script>
