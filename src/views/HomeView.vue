@@ -3,7 +3,7 @@
         <Header/>
 
         <div class="container">
-            <Balance :sum="sum"/>
+            <Balance />
             <IncomeExpences />
             <TransactionList :transactions="transactions"/>
             <AddTransaction />
@@ -18,7 +18,7 @@
     import TransactionList from '../components/TransactionList.vue';
     import AddTransaction from '../components/AddTransaction.vue';
 
-    import { ref, computed } from 'vue';
+    import { ref } from 'vue';
 
     const transactions = ref([
 
